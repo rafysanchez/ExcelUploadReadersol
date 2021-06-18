@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Funcionario>
+
+
+
+
+<div class="container" style="padding:15px; width:80%;">
+    <h3> Gerador de Template de Email - Craft Group</h3><br />
+
+    <form asp-controller="Funcionario" asp-action="Index" method="post" enctype="multipart/form-data">
+
+        <input type="file" name="File" class="btn btn-light"/>
+        <hr />
+        <button class="btn btn-primary" type="submit">Enviar</button>
+
+    </form>
+</div>
+
+
+<div class="container" style="width:80%;">
+
+    @if (Model.Count() > 0)
+    {
+    <h4> Arquivos gerados referentes aois seguintes colaboradores:</h4>    
+        <table cellpadding="0" cellspacing="0" class="table" border="1">
+            <tr>
+                <td>Nome </td>
+                <td>Função </td>
+                <td>País </td>
+                <td>Filial </td>
+                <td>Celular </td>
+                <td>Email </td>
+            </tr>
+
+            @foreach (Funcionario func in Model)
+            {
+                <tr>
+                    <td>@func.nome </td>
+                    <td>@func.funcao </td>
+                    <td>@func.pais </td>
+                    <td>@func.filial </td>
+                    <td>@func.celular </td>
+                    <td>@func.email </td>
+                </tr>
+            }
+
+        </table>
+
+    }
+</div>

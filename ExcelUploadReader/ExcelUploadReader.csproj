@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-ExcelUploadReader-0F55A7B1-DE09-4DD5-9864-1DEFC4821096</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ExcelDataReader" Version="3.6.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.7" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\files\" />
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+</Project>
